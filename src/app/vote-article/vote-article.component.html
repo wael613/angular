@@ -1,0 +1,15 @@
+<div class="parent">
+    <p class="container1">{{art.getScore()}}</p>
+    <div class="container2">
+        <div>
+<div style="font-size: 40px;">{{art.getTitle()}}</div>
+<div >({{art.getLink()}})</div>
+</div>
+<div class="vote">
+    <i class="fas fa-arrow-circle-up"></i>
+<button style="border: none;background-color: white;" (click)="upVote()">upvote</button>
+    <i class="fas fa-arrow-circle-down" ></i>
+<button style="border: none;background-color: white;" (click)="downVote()">downvote</button>
+</div>
+</div>
+</div>

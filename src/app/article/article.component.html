@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>Simple Reddit challenge</h1>
+    </div>
+    <form style="margin: 50px 350px 100px 350px; background-color: #e4f3f8; padding-top: 20px ;padding-left: 50px;padding-right: 50px;padding-bottom: 20px;">
+        <div class="mb-3">
+            Add link <br><br>
+          <label for="exampleInputEmail1" class="form-label">Title :</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" #title>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Link :</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" #link>
+        </div>
+        <div style="display:flex;justify-content: flex-end;">
+        <button type="button" class="btn btn-success" (click)="createArticle(title.value, link.value)" >Submit Link</button>
+      </div>
+      </form>
+      <app-vote-article *ngFor="let article of sortArticles()" [art]="article"></app-vote-article>
